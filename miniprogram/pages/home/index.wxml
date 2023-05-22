@@ -1,0 +1,72 @@
+<!--pages/home/index.wxml-->
+<image class="bg-image" src="/static/tftbg.jpeg" mode="scaleToFill"/>
+<view style="margin-top: 200rpx;">
+  <van-cell-group inset custom-class="cell-group">
+    <van-notice-bar
+      speed="120"
+      color="#000"
+      background="#ffffff"
+      left-icon="volume-o"
+      text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。"
+      />
+  </van-cell-group>
+  <van-cell-group inset custom-class="cell-group">
+    <view style="position: relative;">
+      <van-cell size="large" title="{{name}}" label="{{idNumber}}" value-class="cell-value" title-class="cell-title">
+        <view class="cell-icon">
+          <van-icon size="18px" color="var(--primary-color)" name="manager" />
+          个人信息
+        </view>
+        <view class="cell-icon">
+          <van-icon size="18px" color="var(--primary-color)" name="friends" />
+          家庭码
+        </view>
+      </van-cell>
+      <view class="dot"></view>
+    </view>
+    <van-cell>
+      <view slot="title">
+        <view class="show-sign-qr">
+          <van-icon size="2em" name="qr" />
+          <view>出示我的健康码</view>
+          <view class="sub-info">填报信息获取健康码</view>
+        </view>
+      </view>
+    </van-cell>
+  </van-cell-group>
+  <van-cell-group inset custom-class="cell-group">
+    <van-grid column-num="3" icon-size="80rpx" border="{{false}}">
+      <van-grid-item text-class="grid-text" wx:for="{{list}}" icon="{{item.icon}}" text="{{item.text}}" />
+    </van-grid>
+  </van-cell-group>
+
+  <van-cell-group inset custom-class="cell-group">
+    <van-cell title-class="cell-foreign-title">
+      <view slot="title" style="margin-bottom: 30px;">
+        <view>
+          境外人士（含港澳台）填报入口
+        </view>
+        <view style="font-weight: 500; margin-bottom: 15px;">
+          Declaration entry for foreign nationals,Hong Kong,Macao and Taiwan residents.
+        </view>
+        <van-button size="large" block plain color="var(--primary-color)">点击进入 / Click Here</van-button>
+      </view>
+    </van-cell>
+  </van-cell-group>
+  <van-cell-group border="{{false}}" inset custom-class="cell-group">
+    <van-button icon="exchange" block color="#1d2faa">切换关怀模式</van-button>
+  </van-cell-group>
+  <van-cell-group border="{{false}}" inset custom-class="cell-group">
+    <view class="footer-copyright">
+      <view style="margin-bottom: 2rem;">
+        <van-icon name="info-o" /><text style="padding-left: .3rem;">常见问题</text>
+      </view>
+      <view>
+        北风为了应付一下2023春期期末作品所写
+      </view>
+      <view>
+        21PB软件3B班北风提供技术支持
+      </view>
+    </view>
+  </van-cell-group>
+</view>
