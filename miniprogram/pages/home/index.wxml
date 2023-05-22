@@ -1,9 +1,11 @@
 <!--pages/home/index.wxml-->
-<my-navigation>
-123
+<my-navigation background="rgba(255,255,255,{{opacity}})">
+  <view class="navigation" style="--navigation-color:{{navigationColor}}">
+    四川天府健康通
+  </view>
 </my-navigation>
 <image class="bg-image" src="/static/tftbg.jpeg" mode="scaleToFill"/>
-<view style="margin-top: 200rpx;">
+<view style="margin-top: 200rpx;" id="main">
   <van-cell-group inset custom-class="cell-group">
     <van-notice-bar
       speed="120"
@@ -16,10 +18,12 @@
   <van-cell-group inset custom-class="cell-group">
     <view style="position: relative;">
       <van-cell size="large" title="{{name}}" label="{{idNumber}}" value-class="cell-value" title-class="cell-title">
-        <view class="cell-icon">
-          <van-icon size="18px" color="var(--primary-color)" name="manager" />
-          个人信息
-        </view>
+        <navigator url="">
+          <view class="cell-icon" bindtap="handleToUserInfo">
+            <van-icon size="18px" color="var(--primary-color)" name="manager" />
+            个人信息
+          </view>
+        </navigator>
         <view class="cell-icon">
           <van-icon size="18px" color="var(--primary-color)" name="friends" />
           家庭码

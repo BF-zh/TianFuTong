@@ -6,7 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isInit:false,
+    navigationColor:"",
     name:"",
+    mainOffsetTop:0,
+    opacity:0,
     idNumber:"",
     list:[
       {icon:"/static/icon/lung.svg",text:"核酸检测\n结果查询"},
@@ -24,7 +28,20 @@ Page({
   onLoad() {
 
   },
-
+  onPageScroll () {
+    wx.createSelectorQuery().select('#main').boundingClientRect(({top})=>{
+      const {isInit,mainOffsetTop,opacity,navigationColor} = this.data
+      if(!isInit){
+        this.setData({
+          isInit:true,
+          mainOffsetTop:top
+        })
+      }
+      if(top<0) return this.setData({opacity:1})
+      opacity>.5?this.setData({navigationColor:"#000"}):this.setData({navigationColor:"#fff"})
+      this.setData({opacity:(mainOffsetTop-top)/(mainOffsetTop)})
+    }).exec()
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -75,5 +92,5 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
 })

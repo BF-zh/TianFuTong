@@ -12,6 +12,7 @@
     "van-notice-bar": "@vant/weapp/notice-bar/index",
     "van-grid": "@vant/weapp/grid/index",
     "van-button": "@vant/weapp/button/index",
+    "van-sticky": "@vant/weapp/sticky/index",
     "van-grid-item": "@vant/weapp/grid-item/index"
   },
   "window": {

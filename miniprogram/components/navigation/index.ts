@@ -27,6 +27,7 @@ Component({
   lifetimes:{
     attached(){
       this.setData({navigation:getSystemInfo()})
+      console.log(this.properties);
     }
   }
 })

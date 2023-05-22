@@ -1,6 +1,15 @@
 page{
   background: var(--primary-color);
 }
+.navigation{
+  --navigation-color:#fff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:var(--navigation-color);
+  transition: color .3s;
+}
 .bg-image{
   position: absolute;
   left: 0;
