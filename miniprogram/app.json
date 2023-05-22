@@ -5,6 +5,7 @@
     "pages/logs/logs"
   ],
   "usingComponents": {
+    "my-navigation":"components/navigation/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-cell-group": "@vant/weapp/cell-group/index",

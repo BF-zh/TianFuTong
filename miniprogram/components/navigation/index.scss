@@ -1,0 +1,10 @@
+.my-navigation{
+  height: var(--heigth);
+  padding-top: var(--statusBarHeight);
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  box-sizing:border-box;
+  width: 100%;
+}

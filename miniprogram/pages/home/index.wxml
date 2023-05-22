@@ -1,4 +1,7 @@
 <!--pages/home/index.wxml-->
+<my-navigation>
+123
+</my-navigation>
 <image class="bg-image" src="/static/tftbg.jpeg" mode="scaleToFill"/>
 <view style="margin-top: 200rpx;">
   <van-cell-group inset custom-class="cell-group">
@@ -36,7 +39,7 @@
   </van-cell-group>
   <van-cell-group inset custom-class="cell-group">
     <van-grid column-num="3" icon-size="80rpx" border="{{false}}">
-      <van-grid-item text-class="grid-text" wx:for="{{list}}" icon="{{item.icon}}" text="{{item.text}}" />
+      <van-grid-item text-class="grid-text" wx:key="index" wx:for="{{list}}" icon="{{item.icon}}" text="{{item.text}}" />
     </van-grid>
   </van-cell-group>
 
