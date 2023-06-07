@@ -1,11 +1,13 @@
 {
   "pages": [
     "pages/home/index",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/userInfo/index",
+    "pages/verified/index",
+    "pages/familyQr/index"
   ],
   "usingComponents": {
     "my-navigation":"components/navigation/index",
+    "van-field": "@vant/weapp/field/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
@@ -13,7 +15,12 @@
     "van-grid": "@vant/weapp/grid/index",
     "van-button": "@vant/weapp/button/index",
     "van-sticky": "@vant/weapp/sticky/index",
-    "van-grid-item": "@vant/weapp/grid-item/index"
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-toast": "@vant/weapp/toast/index"
   },
   "window": {
     "backgroundTextStyle": "light",

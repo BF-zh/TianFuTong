@@ -1,0 +1,43 @@
+<!--pages/verified/index.wxml-->
+<van-cell-group inset custom-class="cell-group">
+  <van-field
+    label="姓名"
+    model:value="{{userName}}"
+    placeholder="请输入姓名"
+    bind:blur="handleInputBlur"
+    bind:change="handleInputChange"
+    data-error="请输入中文用户名"
+    data-errorKey="userNameErrorMessage"
+    data-key="userName"
+    error-message="{{userNameErrorMessage}}"
+  />
+  <van-field
+    label="身份证号"
+    model:value="{{idCard}}"
+    type="idcard"
+    error-message="{{idCordErrorMessage}}"
+    bind:change="handleInputChange"
+    data-errorKey="idCordErrorMessage"
+    data-key="idCard"
+    bind:blur="handleInputBlur"
+    data-error="请输入有效证件号码"
+    placeholder="请输入身份证号"
+  />
+</van-cell-group>
+<van-cell-group inset border="{{false}}">
+  <view style="padding:200rpx 0;">
+  <view style="padding: 50rpx 0;">
+    <van-checkbox value="{{ allow }}" shape="square" bind:change="handleSelectProtocol">
+        <view class="protocol">我同意小程序使用我所提交的信息用于身份认证及快捷登陆。查看 <text  data-title="用户协议"  catchtap="handleShowProtocol" class="link">用户协议</text> 及 <text class="link" data-title="隐私政策" catchtap="handleShowProtocol">隐私政策</text></view>
+    </van-checkbox>
+  </view>
+  <van-button block  color="var(--primary-color)" bind:click="handleSubmit">开始认证</van-button>
+  </view>
+</van-cell-group>
+
+<!-- 我是一个提示框 -->
+<van-dialog id="van-dialog" />
+<!-- 顶部消息通知 -->
+<van-notify id="van-notify" />
+<!-- 文字提示 -->
+<van-toast id="van-toast" />

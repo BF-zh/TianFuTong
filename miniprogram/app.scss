@@ -1,5 +1,8 @@
 /**app.wxss**/
 page{
   --primary-color:#314ee2;
+  --page-default-bg:#f6f7f9;
+  --link-color:#4e94f4;
   --secondary-color:#969799;
+  background-color: var(--page-default-bg);
 }

@@ -18,13 +18,11 @@
   <van-cell-group inset custom-class="cell-group">
     <view style="position: relative;">
       <van-cell size="large" title="{{name}}" label="{{idNumber}}" value-class="cell-value" title-class="cell-title">
-        <navigator url="">
-          <view class="cell-icon" bindtap="handleToUserInfo">
+          <view class="cell-icon" data-url="/pages/userInfo/index" bindtap="handleToUserInfo">
             <van-icon size="18px" color="var(--primary-color)" name="manager" />
             个人信息
           </view>
-        </navigator>
-        <view class="cell-icon">
+        <view class="cell-icon" data-url="/pages/familyQr/index" bindtap="handleToUserInfo">
           <van-icon size="18px" color="var(--primary-color)" name="friends" />
           家庭码
         </view>
@@ -33,7 +31,7 @@
     </view>
     <van-cell>
       <view slot="title">
-        <view class="show-sign-qr">
+        <view class="show-sign-qr" data-url="/pages/verified/index"  bindtap="handleToUserInfo">
           <van-icon size="2em" name="qr" />
           <view>出示我的健康码</view>
           <view class="sub-info">填报信息获取健康码</view>
